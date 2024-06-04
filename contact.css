@@ -1,0 +1,47 @@
+body {
+    background-color: beige;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 400px;
+    text-align: center;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.social-icons img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+
+
+/*freccia home*/
+#back-to-home {
+    font-size: 24px; /* Dimensione della freccia */
+    color: black; /* Colore della freccia */
+    text-decoration: none; /* Rimuovi la sottolineatura */
+    margin-right: 20px; /* Spazio tra la freccia e il titolo */
+    padding: 10px; /* Aggiungi padding per un'area di clic maggiore */
+    position: absolute; /* Posiziona la freccia in modo assoluto */
+    top: 10px; /* Distanza dal bordo superiore */
+    left: 10px; /* Distanza dal bordo sinistro */
+}
+
+#back-to-home:hover {
+    color: #20ff02ad; /* Cambia colore al passaggio del mouse */
+    text-decoration: none; /* Rimuovi la sottolineatura */
+}

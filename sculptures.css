@@ -1,0 +1,209 @@
+body {
+    background-image: url('images/sculptures.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 95vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    color: #666666;
+    padding-top: 2.5rem;
+    padding-left: 50px; /* Aggiunge un po' di spazio a sinistra */
+}
+
+
+
+#home {
+    color: white;
+    font-family: "Cinzel", sans-serif;
+    font-style: normal;
+    font-size: 40px;
+    letter-spacing: 2px;
+    padding-bottom: 20px;
+}
+
+
+ul#sculptur {
+    display: grid; /* Utilizza CSS Grid */
+    grid-template-columns: repeat(3, 1fr); /* 3 colonne */
+    grid-gap: 20px; /* Spazio tra gli elementi */
+    list-style: none;
+    padding: 0;
+    text-align: center; /* Allinea il testo al centro */
+    padding-left: 50px; /* Allinea gli elementi a sinistra con il titolo */
+}
+
+ul#sculptur li {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 520;
+    font-size: 20px;
+    color: white;
+    margin: 10px 0;
+    cursor: pointer; /* Aggiunge un cursore puntatore per indicare che è cliccabile */
+    text-decoration: underline; /* Aggiunge la sottolineatura */
+}
+
+ul#sculptur li:hover {
+    color: #d10f0fad; /* Cambia colore al passaggio del mouse */
+}
+
+footer {
+    background-color: rgba(128, 128, 128, 0.945);
+    text-align: center;
+    padding: 25px;
+    position: absolute;
+    bottom: -200px;
+    left: 0;
+    right: 0;
+}
+
+footer span {
+    display: block;
+    padding: 0px 0px 7px 0px;
+    font-family: "Work Sans", sans-serif;
+    color: black;
+    font-weight: 43;
+    font-size: 12px;
+}
+
+#modale.hidden {
+    display: none;
+}
+
+#modale {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#modale img {
+    height: 70%;
+    border: 1px solid black;
+    margin-left: -40px;
+}
+
+#result-view {
+    display: flex;
+}
+
+    
+    .show-background {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        overflow-x: auto;
+        height: 28.7em;
+        display: inline-block; /* Imposto il display a inline-block per adattare al contenuto*/ 
+    }
+    
+    
+    .sculpture{
+        margin-right: 50px; /* Aggiungo spazio tra gli elementi */
+        margin-top: 45px;
+    }
+    
+    .sculpture h3{
+        font-weight: 300; /* Imposto lo stile del testo come sottile */
+        color: white;
+    }
+    
+    .sculpture img {
+        max-width: 200px; /* Imposto la larghezza massima dell'immagine */
+        max-height: 200px; /* Imposto l'altezza massima dell'immagine */
+        width: auto; /* Imposto la larghezza automatica per mantenere l'aspetto originale */
+        height: auto; /* Imposto l'altezza automatica per mantenere l'aspetto originale */
+    }
+
+
+
+    
+    @media screen and (max-width: 800px) {
+
+        .navbar {
+            flex-direction: column; 
+            padding-top: 0.5rem; 
+        }
+    
+        #home {
+            padding: 0.5rem 0; 
+        }
+    }
+    
+    @media screen and (max-width: 200px) {
+    
+        #home {
+            font-size: 10px;
+        }
+        footer span {
+            font-size: 9px;
+        }
+      
+    }
+
+
+
+
+        /* Stile per schermo più piccolo */
+@media screen and (max-width: 800px) {
+    .sculpture{
+        margin-right: 20px; /* Riduco lo spazio tra gli elementi */
+        margin-top: 20px; /* Riduco lo spazio tra gli elementi */
+    }
+
+    .show-background{
+        flex-direction: column; /* Imposto la direzione dei flessi a colonna */
+        align-items: center; /* Allineo gli elementi al centro */
+        background-color:aquamarine;
+    }
+    /*nascondo il footer per rendere piu visibili le immagini*/
+    footer {
+        display: none;
+    }
+}
+
+
+/* Stile per schermi molto piccoli */
+@media screen and (max-width: 400px) {
+    .sculpture {
+        margin-right: 10px; /* Riduco ulteriormente lo spazio tra gli elementi */
+        margin-top: 10px; /* Riduco ulteriormente lo spazio tra gli elementi */
+    }
+    .sculpture img {
+        max-width: 150px; /* Imposto la larghezza massima dell'immagine su schermi molto piccoli */
+        max-height: 150px; /* Imposto l'altezza massima dell'immagine su schermi molto piccoli */
+    }
+    .show-background{
+        padding: 10px;
+    }
+   
+}
+
+
+/*freccia home*/
+#back-to-home {
+    font-size: 24px; /* Dimensione della freccia */
+    color: white; /* Colore della freccia */
+    text-decoration: none; /* Rimuovi la sottolineatura */
+    margin-right: 20px; /* Spazio tra la freccia e il titolo */
+    padding: 10px; /* Aggiungi padding per un'area di clic maggiore */
+    position: absolute; /* Posiziona la freccia in modo assoluto */
+    top: 10px; /* Distanza dal bordo superiore */
+    left: 10px; /* Distanza dal bordo sinistro */
+}
+
+#back-to-home:hover {
+    color: #d10f0fad; /* Cambia colore al passaggio del mouse */
+}

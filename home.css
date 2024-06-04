@@ -1,0 +1,164 @@
+body {
+    background-image: url('images/van-gogh.jpg'), 
+                      url('images/monet.jpg'), 
+                      url('images/Vangogh.jpg'), 
+                      url('images/klimt.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 95vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    color: #666666;
+    padding-top: 2.5rem;
+    justify-content: space-between;
+    gap: 10px; /*da un po di spazio fra i flex item*/
+}
+
+.navElements {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #EEF1F6;
+    margin-right: 10px;
+}
+
+.navElements a {
+    color: #EEF1F6; /* Colore dei link */
+    text-decoration: none; /* Rimuovi la sottolineatura */
+}
+
+.navElements a:hover {
+    text-decoration: underline; /* Aggiungi sottolineatura al passaggio del mouse */
+}
+
+.navElements:last-child {
+    padding-right: 50px; /* Imposta il padding a destra sull'ultimo elemento per spostare tutti gli altri a sinistra */
+}
+
+#home {
+    color: #EEF1F6;
+    font-family: "Cinzel", sans-serif;
+    font-style: normal;
+    font-size: 40px;
+    letter-spacing: 2px;
+    margin-right: auto;
+    padding-left: 100px;
+}
+
+footer {
+    background-color: #FFFFFF;
+    text-align: center;
+    padding: 28px;
+    position: absolute;
+    bottom: -200px;
+    left: 0;
+    right: 0;
+}
+
+footer span {
+    display: block;
+    padding: 0px 0px 7px 0px;
+    font-family: "Work Sans", sans-serif;
+    color: #919191;
+    font-weight: 43;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 800px) {
+    .navbar {
+        flex-direction: column; 
+        padding-top: 0.5rem; 
+    }
+
+    .navElements {
+        padding: 0.5rem; 
+    }
+
+    #home {
+        padding: 0.5rem 0; 
+    }
+}
+
+@media screen and (max-width: 200px) {
+    #home {
+        font-size: 10px;
+    }
+    footer span {
+        font-size: 9px;
+    }
+    .navElements {
+        font-size: 9px;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+footer h1 {
+    font-weight: 100;
+    font-size: 10px;
+    color: #333;
+    font-family: "Work Sans", sans-serif;
+}
+
+footer span:nth-child(2):hover {
+    color: black;
+    cursor: pointer;
+}
+
+/* Stili per about */
+.menu {
+    display: none; /* Nascondi i menu per default */
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.menu a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 300;
+}
+
+.menu a:hover {
+    background-color: #f0f0f0; 
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+
+/* Stili per il messaggio dello stato */
+#status-message {
+    background-color: #dff0d8; /* Colore di sfondo verde */
+    color: #3c763d; /* Colore del testo verde scuro */
+    padding: 12px; /* Spazio interno */
+    margin: 0 auto; /* Centra orizzontalmente */
+    border: 1px solid #d6e9c6; /* Bordo verde chiaro */
+    border-radius: 4px; /* Bordi arrotondati */
+    max-width: 300px; /* Larghezza massima del contenitore */
+    position: fixed; /* Posizionamento fisso */
+    top: 50%; /* Posizione verticale al 50% */
+    left: 50%; /* Posizione orizzontale al 50% */
+    transform: translate(-50%, -50%); /* Centra verticalmente e orizzontalmente */
+    font-size: 18px; /* Dimensione del testo */
+}
+
+
+
+.close-button {
+    float: right; /* Allinea il pulsante a destra */
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+}
